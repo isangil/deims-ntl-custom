@@ -1,0 +1,10 @@
+name = NTL
+description = Custom code and migrations specific to the North Temperate Lakes LTER.
+core = 7.x
+;dependencies[] = deims
+;files[] = migration/SevilletaContentDataSetMigration.php
+files[] = migration/NtlContentImageGalleryMigration.php
+;files[] = migration/SevilletaContentMetCentralMigration.php
+files[] = migration/NtlContentOrganizationMigration.php
+;files[] = migration/SevilletaContentPersonMigration.php
+;files[] = migration/SevilletaFileMigration.php
