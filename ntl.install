@@ -5,12 +5,12 @@
  */
 function ntl_install() {
   // Create the categories vocabulary.
-  $description = st('Use tags to group articles on similar topics into categories.');
+  $description = st('High level categories to create some basic sortings');
   $help = st('Enter a comma-separated list of words to describe your content.');
   $vocabulary = (object) array(
-    'name' => st('Categories'),
+    'name' => st('Site-Category'),
     'description' => $description,
-    'machine_name' => 'categories',
+    'machine_name' => 'site_category',
     'help' => $help,
 
   );
