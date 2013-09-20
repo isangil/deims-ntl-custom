@@ -5,7 +5,7 @@ Customizations for the NTL DEIMS migration
 
 To use:
 
-git clone --branch 7.x-1.x git@github.com:isangil/deims-ntl-custom
+git clone  git@github.com:isangil/deims-ntl-custom
 
 this is a custom Drupal 7.x module.  It extends the migrate and DEIMS D6 Migrate module
 and it is ad-hoc for the particulars of the North Temperate Lakes LTER.
