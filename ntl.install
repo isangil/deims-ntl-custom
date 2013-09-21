@@ -1,10 +1,11 @@
 <?php
-
+// we already featurized the NTL Keywords Taxonomies, but
+// Im ghonna do the rest here.
 /**
  * Implements hook_install().
  */
 function ntl_install() {
-  // Create the categories vocabulary.
+  // Create the Site-categories vocabulary.
   $description = st('High level categories to create some basic sortings');
   $help = st('Enter a comma-separated list of words to describe your content.');
   $vocabulary = (object) array(
@@ -15,4 +16,16 @@ function ntl_install() {
 
   );
   taxonomy_vocabulary_save($vocabulary);
+  // create the Image Galleries VOcabulary
+  $description = st('High level vocabulary to create image thematic groupings');
+  $help = st('Enter a comma-separated list of words to describe your content.');
+  $vocabulary = (object) array(
+    'name' => st('Image Galleries'),
+    'description' => $description,
+    'machine_name' => 'image_galleries',
+    'help' => $help,
+
+  );
+  taxonomy_vocabulary_save($vocabulary);
+  // Tags come w/ D7!!
 }
