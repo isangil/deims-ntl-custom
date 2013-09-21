@@ -13,6 +13,7 @@ function ntl_migrate_api() {
       'NtlContentImageGallery' => array(
         'class_name' => 'NtlContentImageGalleryMigration',
       ),
+      // Core area vocab is entangled with other vocab!
       'NtlTaxonomyCategories' => array(
         'class_name' => 'DrupalTerm6Migration',
         'description' => "Taxonomy migration for the 'NTL Keywords' vocabulary.",
@@ -21,6 +22,42 @@ function ntl_migrate_api() {
         // @todo Make this vocabulary source ID automatic from the D6 database.
         'source_vocabulary' => '5',
         'destination_vocabulary' => 'NTL Keywords',
+      ),
+      'NtlTaxonomyTags' => array(
+        'class_name' => 'DrupalTerm6Migration',
+        'description' => "Taxonomy migration for the 'Tags' vocabulary.",
+        'source_connection' => 'drupal6',
+        'source_version' => 6,
+        // @todo Make this vocabulary source ID automatic from the D6 database.
+        'source_vocabulary' => '3',
+        'destination_vocabulary' => 'Tags',
+      ),
+      'NtlSiteCategory' => array(
+        'class_name' => 'DrupalTerm6Migration',
+        'description' => "Taxonomy migration for the 'Site-Category' vocabulary.",
+        'source_connection' => 'drupal6',
+        'source_version' => 6,
+        // @todo Make this vocabulary source ID automatic from the D6 database.
+        'source_vocabulary' => '6',
+        'destination_vocabulary' => 'Site-Category',
+      ),
+      'NtlTaxonomyCategories' => array(
+        'class_name' => 'DrupalTerm6Migration',
+        'description' => "Taxonomy migration for the 'Image Galleries' vocabulary.",
+        'source_connection' => 'drupal6',
+        'source_version' => 6,
+        // @todo Make this vocabulary source ID automatic from the D6 database.
+        'source_vocabulary' => '7',
+        'destination_vocabulary' => 'Image Galleries',
+      ),
+      'DeimsTaxonomyLTERControlled' => array(
+        'class_name' => 'DrupalTerm6Migration',
+        'description' => "Taxonomy migration for the 'LTER Controlled' vocabulary.",
+        'source_connection' => 'drupal6',
+        'source_version' => 6,
+        // @todo Make this vocabulary source ID automatic from the D6 database.
+        'source_vocabulary' => '4',
+        'destination_vocabulary' => 'lter_controlled_vocabulary',
       ),
     ),
   );
