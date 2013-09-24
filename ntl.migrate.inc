@@ -14,14 +14,14 @@ function ntl_migrate_api() {
         'class_name' => 'NtlContentImageGalleryMigration',
       ),
       // Core area vocab is entangled with other vocab!
-      'NtlTaxonomyCategories' => array(
+      'NtlTaxonomyNtlKeywords' => array(
         'class_name' => 'DrupalTerm6Migration',
         'description' => "Taxonomy migration for the 'NTL Keywords' vocabulary.",
         'source_connection' => 'drupal6',
         'source_version' => 6,
         // @todo Make this vocabulary source ID automatic from the D6 database.
         'source_vocabulary' => '5',
-        'destination_vocabulary' => 'NTL Keywords',
+        'destination_vocabulary' => 'ntl_keywords',
       ),
       'NtlTaxonomyTags' => array(
         'class_name' => 'DrupalTerm6Migration',
@@ -30,25 +30,25 @@ function ntl_migrate_api() {
         'source_version' => 6,
         // @todo Make this vocabulary source ID automatic from the D6 database.
         'source_vocabulary' => '3',
-        'destination_vocabulary' => 'Tags',
+        'destination_vocabulary' => 'tags',
       ),
-      'NtlSiteCategory' => array(
+      'NtlTaxonomySiteCategory' => array(
         'class_name' => 'DrupalTerm6Migration',
         'description' => "Taxonomy migration for the 'Site-Category' vocabulary.",
         'source_connection' => 'drupal6',
         'source_version' => 6,
         // @todo Make this vocabulary source ID automatic from the D6 database.
         'source_vocabulary' => '6',
-        'destination_vocabulary' => 'Site-Category',
+        'destination_vocabulary' => 'site_category',
       ),
-      'NtlTaxonomyCategories' => array(
+      'NtlTaxonomyImageGalleries' => array(
         'class_name' => 'DrupalTerm6Migration',
         'description' => "Taxonomy migration for the 'Image Galleries' vocabulary.",
         'source_connection' => 'drupal6',
         'source_version' => 6,
         // @todo Make this vocabulary source ID automatic from the D6 database.
         'source_vocabulary' => '7',
-        'destination_vocabulary' => 'Image Galleries',
+        'destination_vocabulary' => 'image_galleries',
       ),
       'DeimsTaxonomyLTERControlled' => array(
         'class_name' => 'DrupalTerm6Migration',
