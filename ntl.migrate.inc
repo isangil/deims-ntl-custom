@@ -13,6 +13,9 @@ function ntl_migrate_api() {
       'NtlContentImageGallery' => array(
         'class_name' => 'NtlContentImageGalleryMigration',
       ),
+      'NtlContentProtocol' => array(
+        'class_name' => 'NtlContentProtocolMigration',
+      ),
       // Core area vocab is entangled with other vocab!
       'NtlTaxonomyNtlKeywords' => array(
         'class_name' => 'DrupalTerm6Migration',
