@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the NTL Research Highlights feature.
+ */
+
+include_once 'ntl_research_highlights.features.inc';
