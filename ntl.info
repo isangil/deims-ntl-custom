@@ -5,6 +5,7 @@ core = 7.x
 files[] = migration/NtlContentImageGalleryMigration.php
 files[] = migration/NtlContentOrganizationMigration.php
 files[] = migration/NtlContentProtocolMigration.php
+files[] = migration/NtlContentResearchHighlightMigration.php
 ;files[] = migration/NtlContentPersonMigration.php
 ;files[] = migration/NtlFileMigration.php
 ;files[] = migration/NtlContentDataSetMigration.php
