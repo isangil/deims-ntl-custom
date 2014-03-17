@@ -89,6 +89,179 @@ function ntl_protocol_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-protocol-field_keywords'.
+  $fields['node-protocol-field_keywords'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_keywords',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'lter_controlled_vocabulary',
+            'parent' => '0',
+          ),
+        ),
+        'delete_on_parent_delete' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'protocol',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 9,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_keywords',
+      'label' => 'LTER Keywords',
+      'required' => FALSE,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'module' => 'term_reference_tree',
+        'settings' => array(
+          'cascading_selection' => 0,
+          'filter_view' => '',
+          'leaves_only' => 0,
+          'max_depth' => '',
+          'parent_term_id' => '',
+          'search' => 0,
+          'select_parents' => 0,
+          'start_minimized' => 0,
+          'token_display' => '',
+          'track_list' => 0,
+        ),
+        'type' => 'term_reference_tree',
+        'weight' => '8',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-protocol-field_ntl_keywords'.
+  $fields['node-protocol-field_ntl_keywords'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_ntl_keywords',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'ntl_keywords',
+            'parent' => '0',
+          ),
+        ),
+        'delete_on_parent_delete' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'protocol',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 8,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'ds_extras_field_template' => '',
+      'entity_type' => 'node',
+      'field_name' => 'field_ntl_keywords',
+      'label' => 'NTL Keywords',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'term_reference_tree',
+        'settings' => array(
+          'cascading_selection' => 0,
+          'filter_view' => '',
+          'leaves_only' => 0,
+          'max_depth' => '',
+          'parent_term_id' => '',
+          'search' => 0,
+          'select_parents' => 0,
+          'start_minimized' => 0,
+          'token_display' => '',
+          'track_list' => 0,
+        ),
+        'type' => 'term_reference_tree',
+        'weight' => '7',
+      ),
+      'workbench_access_field' => 0,
+    ),
+  );
+
   // Exported field: 'node-protocol-field_protocol_beg_end_date'.
   $fields['node-protocol-field_protocol_beg_end_date'] = array(
     'field_config' => array(
@@ -254,7 +427,7 @@ Process|Process',
           'sort_options' => 0,
         ),
         'type' => 'select_or_other',
-        'weight' => '6',
+        'weight' => '4',
       ),
       'workbench_access_field' => 0,
     ),
@@ -328,182 +501,6 @@ Process|Process',
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '7',
-      ),
-      'workbench_access_field' => 0,
-    ),
-  );
-
-  // Exported field: 'node-protocol-field_protocol_lter_keywords'.
-  $fields['node-protocol-field_protocol_lter_keywords'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_protocol_lter_keywords',
-      'field_permissions' => array(
-        'type' => '0',
-      ),
-      'foreign keys' => array(
-        'tid' => array(
-          'columns' => array(
-            'tid' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'taxonomy',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'lter_controlled_vocabulary',
-            'parent' => '0',
-          ),
-        ),
-        'delete_on_parent_delete' => '',
-      ),
-      'translatable' => '0',
-      'type' => 'taxonomy_term_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'protocol',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'taxonomy',
-          'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => 7,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'ds_extras_field_template' => '',
-      'entity_type' => 'node',
-      'field_name' => 'field_protocol_lter_keywords',
-      'label' => 'LTER Keywords',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'term_reference_tree',
-        'settings' => array(
-          'cascading_selection' => 0,
-          'filter_view' => '',
-          'leaves_only' => 1,
-          'max_depth' => '',
-          'parent_term_id' => '',
-          'search' => 0,
-          'select_parents' => 0,
-          'start_minimized' => 0,
-          'token_display' => '',
-          'track_list' => 0,
-        ),
-        'type' => 'term_reference_tree',
-        'weight' => '4',
-      ),
-      'workbench_access_field' => 0,
-    ),
-  );
-
-  // Exported field: 'node-protocol-field_protocol_ntl_keywords'.
-  $fields['node-protocol-field_protocol_ntl_keywords'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_protocol_ntl_keywords',
-      'field_permissions' => array(
-        'type' => '0',
-      ),
-      'foreign keys' => array(
-        'tid' => array(
-          'columns' => array(
-            'tid' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'taxonomy',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'ntl_keywords',
-            'parent' => '0',
-          ),
-        ),
-        'delete_on_parent_delete' => '',
-      ),
-      'translatable' => '0',
-      'type' => 'taxonomy_term_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'protocol',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'taxonomy',
-          'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => 6,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'ds_extras_field_template' => '',
-      'entity_type' => 'node',
-      'field_name' => 'field_protocol_ntl_keywords',
-      'label' => 'NTL Keywords',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'term_reference_tree',
-        'settings' => array(
-          'cascading_selection' => 0,
-          'filter_view' => '',
-          'leaves_only' => 1,
-          'max_depth' => '',
-          'parent_term_id' => '',
-          'search' => 0,
-          'select_parents' => 0,
-          'start_minimized' => 0,
-          'token_display' => '',
-          'track_list' => 0,
-        ),
-        'type' => 'term_reference_tree',
         'weight' => '5',
       ),
       'workbench_access_field' => 0,
@@ -680,7 +677,7 @@ methods',
           'sort_options' => 0,
         ),
         'type' => 'select_or_other',
-        'weight' => '8',
+        'weight' => '6',
       ),
       'workbench_access_field' => 0,
     ),
