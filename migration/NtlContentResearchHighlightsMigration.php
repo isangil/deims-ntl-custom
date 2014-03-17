@@ -13,7 +13,7 @@ class NtlContentResearchHighlightsMigration extends DrupalNode6Migration {
       'source_connection' => 'drupal6',
       'source_version' => 6,
       'source_type' => 'research_highlight',
-      'destination_type' => 'article',
+      'destination_type' => 'research_highlight',
       'user_migration' => 'DeimsUser',
     );
 

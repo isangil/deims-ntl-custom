@@ -20,6 +20,9 @@ function ntl_research_highlights_field_default_fields() {
         0 => 'node',
       ),
       'field_name' => 'body',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -83,14 +86,14 @@ function ntl_research_highlights_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-research_highlight-field_res_hilite_lter_keywords'.
-  $fields['node-research_highlight-field_res_hilite_lter_keywords'] = array(
+  // Exported field: 'node-research_highlight-field_keywords'.
+  $fields['node-research_highlight-field_keywords'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_res_hilite_lter_keywords',
+      'field_name' => 'field_keywords',
       'field_permissions' => array(
         'type' => '0',
       ),
@@ -132,7 +135,7 @@ function ntl_research_highlights_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 2,
+          'weight' => 3,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -143,7 +146,7 @@ function ntl_research_highlights_field_default_fields() {
       ),
       'ds_extras_field_template' => '',
       'entity_type' => 'node',
-      'field_name' => 'field_res_hilite_lter_keywords',
+      'field_name' => 'field_keywords',
       'label' => 'LTER Keywords',
       'required' => 0,
       'settings' => array(
@@ -155,7 +158,7 @@ function ntl_research_highlights_field_default_fields() {
         'settings' => array(
           'cascading_selection' => 0,
           'filter_view' => '',
-          'leaves_only' => 1,
+          'leaves_only' => 0,
           'max_depth' => '',
           'parent_term_id' => '',
           'search' => 0,
@@ -165,20 +168,20 @@ function ntl_research_highlights_field_default_fields() {
           'track_list' => 0,
         ),
         'type' => 'term_reference_tree',
-        'weight' => '33',
+        'weight' => '35',
       ),
       'workbench_access_field' => 0,
     ),
   );
 
-  // Exported field: 'node-research_highlight-field_res_hilite_ntl_keywords'.
-  $fields['node-research_highlight-field_res_hilite_ntl_keywords'] = array(
+  // Exported field: 'node-research_highlight-field_ntl_keywords'.
+  $fields['node-research_highlight-field_ntl_keywords'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_res_hilite_ntl_keywords',
+      'field_name' => 'field_ntl_keywords',
       'field_permissions' => array(
         'type' => '0',
       ),
@@ -220,7 +223,7 @@ function ntl_research_highlights_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 1,
+          'weight' => 4,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -231,7 +234,7 @@ function ntl_research_highlights_field_default_fields() {
       ),
       'ds_extras_field_template' => '',
       'entity_type' => 'node',
-      'field_name' => 'field_res_hilite_ntl_keywords',
+      'field_name' => 'field_ntl_keywords',
       'label' => 'NTL Keywords',
       'required' => 0,
       'settings' => array(
@@ -243,7 +246,7 @@ function ntl_research_highlights_field_default_fields() {
         'settings' => array(
           'cascading_selection' => 0,
           'filter_view' => '',
-          'leaves_only' => 1,
+          'leaves_only' => 0,
           'max_depth' => '',
           'parent_term_id' => '',
           'search' => 0,
@@ -253,7 +256,7 @@ function ntl_research_highlights_field_default_fields() {
           'track_list' => 0,
         ),
         'type' => 'term_reference_tree',
-        'weight' => '32',
+        'weight' => '37',
       ),
       'workbench_access_field' => 0,
     ),

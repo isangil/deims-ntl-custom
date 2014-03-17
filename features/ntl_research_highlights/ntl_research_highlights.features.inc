@@ -15,6 +15,13 @@ function ntl_research_highlights_ctools_plugin_api() {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function ntl_research_highlights_views_api() {
+  return array("version" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function ntl_research_highlights_node_info() {
