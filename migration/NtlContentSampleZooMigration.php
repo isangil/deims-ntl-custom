@@ -3,7 +3,7 @@
 * @file
 * Definition of NtlContentSampleZooMigration
 */
-class NtlContentSampleZoo extends DrupalNode6Migration {
+class NtlContentSampleZooMigration extends DrupalNode6Migration {
 
   protected $dependencies = array();
 

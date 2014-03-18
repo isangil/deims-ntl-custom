@@ -3,7 +3,7 @@
 * @file
 * Definition of NtlContentSampleDendyMigration
 */
-class NtlContentSampleDendy extends DrupalNode6Migration {
+class NtlContentSampleDendyMigration extends DrupalNode6Migration {
 
   protected $dependencies = array();
 
