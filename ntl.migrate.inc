@@ -19,6 +19,12 @@ function ntl_migrate_api() {
       'NtlContentResearchHighLights' => array(
         'class_name' => 'NtlContentResearchHighlightsMigration',
       ),
+      'NtlContentSamplesDendy' => array(
+        'class_name' => 'NtlContentSampleDendyMigration',
+      ),
+      'NtlContentSampleZooMigration' => array(
+	'class_name' => 'NtlContentSampleZooMigration',
+      ),
       // Core area vocab is entangled with other vocab!
       'NtlTaxonomyNtlKeywords' => array(
         'class_name' => 'DrupalTerm6Migration',

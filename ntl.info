@@ -9,3 +9,5 @@ files[] = migration/NtlContentResearchHighlightMigration.php
 ;files[] = migration/NtlContentPersonMigration.php
 ;files[] = migration/NtlFileMigration.php
 ;files[] = migration/NtlContentDataSetMigration.php
+files[] = NtlContentSampleDendyMigration.php
+files[] = NtlContentSampleZooMigration.php
