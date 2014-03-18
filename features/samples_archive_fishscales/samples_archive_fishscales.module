@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Samples Archive Fishscales feature.
+ */
+
+include_once 'samples_archive_fishscales.features.inc';
