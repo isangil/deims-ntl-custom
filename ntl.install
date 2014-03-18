@@ -5,16 +5,6 @@
  * Implements hook_install().
  */
 function ntl_install() {
-  // Create the Site-categories vocabulary.
-  $description = st('High level categories to create some basic sortings');
-  $help = st('Enter a comma-separated list of words to describe your content.');
-  $vocabulary = (object) array(
-    'name' => st('Site-Category'),
-    'description' => $description,
-    'machine_name' => 'site_category',
-    'help' => $help,
-
-  );
   taxonomy_vocabulary_save($vocabulary);
   // create the Image Galleries VOcabulary
   $description = st('High level vocabulary to create image thematic groupings');

@@ -45,7 +45,7 @@ function ntl_migrate_api() {
         'source_version' => 6,
         // @todo Make this vocabulary source ID automatic from the D6 database.
         'source_vocabulary' => '6',
-        'destination_vocabulary' => 'site_category',
+        'destination_vocabulary' => 'section',
       ),
       'NtlTaxonomyImageGalleries' => array(
         'class_name' => 'DrupalTerm6Migration',
