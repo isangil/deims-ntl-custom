@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Sample Archive Zoo Plankton feature.
+ */
+
+include_once 'sample_archive_zoo_plankton.features.inc';
