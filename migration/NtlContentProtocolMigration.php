@@ -19,34 +19,52 @@ class NtlContentProtocolMigration extends DrupalNode6Migration {
 
     parent::__construct($arguments);
 
-//   File Upload looks like was not used, but verify
-
-/*    $this->addFieldMapping('field_protocol_file', 'upload')
- *    ->sourceMigration('DeimsFile')
- *     ->arguments(array(
- *         'file_class' => 'MigrateFileFid',
- *         'preserve_files' => TRUE,
- *     ));
- */
-
+    $this->addUnmigratedSources(array(
+     'upload',
+     'upload:description',
+     'upload:list',
+     'upload:weight',
+     'revision_uid',
+     'revision',
+     'log',
+    ));
+  
+    $this->addUnmigratedDestinations(array(
+      'field_keywords:create_term',
+      'field_keywords:ignore_case',
+      'field_term_categories:create_term',
+      'field_term_categories:ignore_case',
+      'field_ntl_keywords:create_term',
+      'field_ntl_keywords:ignore_case',
+      'field_protocol_beg_end_date:timezone',
+      'field_protocol_beg_end_date:rrule',
+      'field_protocol_format:language',
+      'field_protocol_id:language',
+      'field_protocol_type:language',
+    ));
 // migrate term relationships. there might be another family, Tags. check
 
-    $this->addFieldMapping('field_protocol_lter_keywords', '4')
+    $this->addFieldMapping('field_keywords', '4')
        ->sourceMigration('DeimsTaxonomyLTERControlled');
-    $this->addFieldMapping('field_protocol_lter_keywords:source_type')  
-            ->defaultValue('tid');
+    $this->addFieldMapping('field_keywords:source_type')
+       ->defaultValue('tid');
 
-    $this->addFieldMapping('field_protocol_ntl_keywords', '5')
+    $this->addFieldMapping('field_ntl_keywords', '5')
        ->sourceMigration('NtlTaxonomyNtlKeywords');
-      $this->addFieldMapping('field_protocol_ntl_keywords:source_type')  
-            ->defaultValue('tid');
+    $this->addFieldMapping('field_ntl_keywords:source_type')
+       ->defaultValue('tid');
+
+    $this->addFieldMapping('field_term_categories', '12')
+       ->sourceMigration('NtlTaxonomyNtlKeywords');
+    $this->addFieldMapping('field_term_categories:source_type')
+       ->defaultValue('tid');
+
 
 // 3 fields are named the same in Ntl D6 than D7.
 
     $this->addSimpleMappings(array('field_protocol_id','field_protocol_type','field_protocol_format','field_protocol_beg_end_date'));
 
-// date  one is exactly, but end date differs.
-    $this->addFieldMapping('field_beg_end_date_range:to', 'field_beg_end_date:value2');
+    $this->addFieldMapping('field_protocol_beg_end_date:to', 'field_protocol_beg_end_date:value2');
 
 // entity reference field_protocol_owner_ref
 

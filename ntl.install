@@ -1,11 +1,10 @@
 <?php
-// we already featurized the NTL Keywords Taxonomies, but
-// Im ghonna do the rest here.
 /**
  * Implements hook_install().
  */
 function ntl_install() {
-  taxonomy_vocabulary_save($vocabulary);
+  // we already featurized the NTL Keywords Taxonomies, but need to delete
+
   // create the Image Galleries VOcabulary
   $description = st('High level vocabulary to create image thematic groupings');
   $help = st('Enter a comma-separated list of words to describe your content.');
@@ -14,8 +13,14 @@ function ntl_install() {
     'description' => $description,
     'machine_name' => 'image_galleries',
     'help' => $help,
-
   );
   taxonomy_vocabulary_save($vocabulary);
-  // Tags come w/ D7!!
+
+  // delete the station keywords, replaced by NTL keywords.
+  $vocabulary = (object) array(
+    'name' => st('Station Keywords'),
+    'machine_name' => 'station_keywords',
+  );
+  taxonomy_vocabulary_delete($vocabulary);
+  
 }

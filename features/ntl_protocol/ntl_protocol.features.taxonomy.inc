@@ -9,9 +9,9 @@
  */
 function ntl_protocol_taxonomy_default_vocabularies() {
   return array(
-    'ntl_keywords' => array(
-      'name' => 'NTL Keywords',
-      'machine_name' => 'ntl_keywords',
+    'categories' => array(
+      'name' => 'Categories',
+      'machine_name' => 'categories',
       'description' => '',
       'hierarchy' => '0',
       'module' => 'taxonomy',

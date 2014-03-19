@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Sample Archive Dendy Samples Content Type feature.
- */
-
-include_once 'sample_archive_dendy_samples_content_type.features.inc';
