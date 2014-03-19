@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Sample Archive Dendy feature.
+ */
+
+include_once 'sample_archive_dendy.features.inc';

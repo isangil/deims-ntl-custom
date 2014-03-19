@@ -26,6 +26,30 @@ class NtlContentSampleDendyMigration extends DrupalNode6Migration {
     $this->removeFieldMapping('body:format');
     $this->addUnmigratedSources(array('body', 'teaser', 'format'));
 
+    $this->addUnmigratedSources(array(
+     'revision',
+     'log',
+     'upload',
+     'upload:description',
+     'upload:list',
+     'upload:weight',
+     'revision_uid',
+    ));
+
+    $this->addUnmigratedDestinations(array(
+     'field_sads_accession:language',
+     'field_sads_box:language',
+     'field_sads_comments:language',
+     'field_sads_lake:language',
+     'field_sads_gear:language',
+     'field_sads_site:language',
+     'field_sads_retrieve_date:timezone',
+     'field_sads_retrieve_date:rrule',
+     'field_sads_retrieve_date:to',
+     'field_sads_set_date:to',
+     'field_sads_set_date:timezone',
+     'field_sads_set_date:rrule',
+    ));
     // mappings
     $this->addFieldMapping('field_sads_year','field_sads_year');
     $this->addFieldMapping('field_sads_lake','field_sads_lake');
