@@ -26,6 +26,27 @@ class NtlContentSampleZooMigration extends DrupalNode6Migration {
     $this->removeFieldMapping('body:format');
     $this->addUnmigratedSources(array('body', 'teaser', 'format'));
 
+   $this->addUnmigratedSources(array(
+     'revision',
+     'log',
+     'upload',
+     'upload:description',
+     'upload:list',
+     'upload:weight',
+     'revision_uid',
+    ));
+
+    $this->addUnmigratedDestinations(array(
+     'field_sazp_accession:language',
+     'field_sazp_box:language',
+     'field_sazp_comments:language',
+     'field_sazp_lake:language',
+     'field_sazp_gear:language',
+     'field_sazp_depth:language',
+     'field_sazp_date:to',
+     'field_sazp_date:timezone',
+     'field_sazp_date:rrule',
+    ));
     // mappings
     $this->addFieldMapping('field_sazp_year','field_sazp_year');
     $this->addFieldMapping('field_sazp_lake','field_sazp_lake');
