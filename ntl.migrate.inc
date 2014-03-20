@@ -91,6 +91,9 @@ function ntl_deims_migration_overrides() {
   return array(
 //    'DeimsContentDataSet' => array('class_name' => 'NtlContentDataSetMigration'),
     'DeimsContentOrganization' => array('class_name' => 'NtlContentOrganizationMigration'),
+    'DeimsContentPage' => array('class_name' => 'NtlContentPageMigration'),
+    'DeimsContentResearchProject' => array('class_name' => 'NtlContentProjectMigration'),
+    'DeimsContentResearchSite' => array('class_name' => 'NtlContentResearchSiteMigration'),
 //    'DeimsContentPerson' => array('class_name' => 'NtlContentPersonMigration'),
 //    'DeimsFile' => array('class_name' => 'NtlFileMigration'),
   );
