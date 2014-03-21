@@ -10,6 +10,9 @@ function ntl_migrate_api() {
   $info = array(
     'api' => 2,
     'migrations' => array(
+      'NtlContentDocumentArchive' => array(
+        'class_name' => 'NtlContentDocumentArchiveMigration',
+      ),
       'NtlContentImageGallery' => array(
         'class_name' => 'NtlContentImageGalleryMigration',
       ),
@@ -22,11 +25,17 @@ function ntl_migrate_api() {
       'NtlContentSamplesDendy' => array(
         'class_name' => 'NtlContentSampleDendyMigration',
       ),
-      'NtlContentSampleZooMigration' => array(
-	'class_name' => 'NtlContentSampleZooMigration',
-      ),
       'NtlContentSampleFishscalesMigration' => array(
 	'class_name' => 'NtlContentSampleFishscalesMigration',
+      ),
+      'NtlContentSamplePhytoS' => array(
+	'class_name' => 'NtlContentSamplePhytoSMigration',
+      ),
+      'NtlContentSlidesPhyto' => array(
+	'class_name' => 'NtlContentSlidesPhytoMigration',
+      ),
+      'NtlContentSampleZooMigration' => array(
+	'class_name' => 'NtlContentSampleZooMigration',
       ),
       // Core area vocab is entangled with other vocab!
       'NtlTaxonomyNtlKeywords' => array(
