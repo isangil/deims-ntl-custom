@@ -15,6 +15,13 @@ function sample_archive_phytoplankton_ctools_plugin_api() {
 }
 
 /**
+ * Implements hook_views_api(). Adds views
+ */
+function sample_archive_phytoplankton_views_api() {
+  return array("version" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function sample_archive_phytoplankton_node_info() {
