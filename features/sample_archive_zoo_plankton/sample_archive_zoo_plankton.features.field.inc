@@ -49,11 +49,11 @@ function sample_archive_zoo_plankton_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 4,
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -123,11 +123,11 @@ function sample_archive_zoo_plankton_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 6,
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -199,7 +199,7 @@ function sample_archive_zoo_plankton_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 5,
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -269,7 +269,7 @@ function sample_archive_zoo_plankton_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'date',
           'settings' => array(
             'format_type' => 'long',
@@ -279,7 +279,7 @@ function sample_archive_zoo_plankton_field_default_fields() {
             'multiple_to' => '',
           ),
           'type' => 'date_default',
-          'weight' => 2,
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -358,11 +358,11 @@ function sample_archive_zoo_plankton_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 3,
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -432,11 +432,11 @@ function sample_archive_zoo_plankton_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 7,
+          'weight' => '7',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -458,6 +458,7 @@ function sample_archive_zoo_plankton_field_default_fields() {
         'active' => 1,
         'module' => 'select_or_other',
         'settings' => array(
+          'apply_chosen' => '',
           'available_options' => 'SP_53
 SP_53?80
 SP_80
@@ -517,11 +518,11 @@ NET_80',
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 1,
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -543,6 +544,7 @@ NET_80',
         'active' => 1,
         'module' => 'select_or_other',
         'settings' => array(
+          'apply_chosen' => '',
           'available_options' => 'AL
 BM
 CB
@@ -597,16 +599,16 @@ WI',
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'number',
           'settings' => array(
             'decimal_separator' => '.',
-            'prefix_suffix' => TRUE,
+            'prefix_suffix' => 1,
             'scale' => 0,
-            'thousand_separator' => ' ',
+            'thousand_separator' => '',
           ),
           'type' => 'number_integer',
-          'weight' => 8,
+          'weight' => '8',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -664,16 +666,16 @@ WI',
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'number',
           'settings' => array(
             'decimal_separator' => '.',
-            'prefix_suffix' => TRUE,
+            'prefix_suffix' => 1,
             'scale' => 0,
-            'thousand_separator' => ' ',
+            'thousand_separator' => '',
           ),
           'type' => 'number_integer',
-          'weight' => 9,
+          'weight' => '9',
         ),
         'teaser' => array(
           'label' => 'above',
