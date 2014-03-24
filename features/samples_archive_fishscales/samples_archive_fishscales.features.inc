@@ -15,6 +15,13 @@ function samples_archive_fishscales_ctools_plugin_api() {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function samples_archive_fishscales_views_api() {
+  return array("version" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function samples_archive_fishscales_node_info() {
