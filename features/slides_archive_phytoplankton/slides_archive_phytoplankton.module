@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Slides Archive Phytoplankton feature.
+ */
+
+include_once 'slides_archive_phytoplankton.features.inc';
