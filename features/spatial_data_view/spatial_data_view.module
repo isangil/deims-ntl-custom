@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Spatial Data View feature.
+ */
+
+include_once 'spatial_data_view.features.inc';
