@@ -107,7 +107,7 @@ function ntl_migrate_api() {
  */
 function ntl_deims_migration_overrides() {
   return array(
-//    'DeimsContentDataSet' => array('class_name' => 'NtlContentDataSetMigration'),
+    'DeimsContentDataSet' => array('class_name' => 'NtlContentDataSetMigration'),
     'DeimsContentOrganization' => array('class_name' => 'NtlContentOrganizationMigration'),
     'DeimsContentPage' => array('class_name' => 'NtlContentPageMigration'),
     'DeimsContentResearchProject' => array('class_name' => 'NtlContentProjectMigration'),
