@@ -37,7 +37,7 @@ function ntl_migrate_api() {
       'NtlContentSampleZooMigration' => array(
 	'class_name' => 'NtlContentSampleZooMigration',
       ),
-      // Core area vocab is entangled with other vocab!
+      // Core area vocab terms are included inside the source Tags vocab!
       'NtlTaxonomyNtlKeywords' => array(
         'class_name' => 'DrupalTerm6Migration',
         'description' => "Taxonomy migration for the 'NTL Keywords' vocabulary.",
@@ -108,6 +108,7 @@ function ntl_migrate_api() {
 function ntl_deims_migration_overrides() {
   return array(
     'DeimsContentDataSet' => array('class_name' => 'NtlContentDataSetMigration'),
+    'DeimsContentDataFile' => array('class_name' => 'NtlContentDataFileMigration'),
     'DeimsContentOrganization' => array('class_name' => 'NtlContentOrganizationMigration'),
     'DeimsContentPage' => array('class_name' => 'NtlContentPageMigration'),
     'DeimsContentResearchProject' => array('class_name' => 'NtlContentProjectMigration'),

@@ -3,6 +3,7 @@ description = Custom code and migrations specific to the North Temperate Lakes L
 core = 7.x
 ;dependencies[] = deims
 files[] = migration/NtlContentDataSetMigration.php
+files[] = migration/NtlContentDataFileMigration.php
 files[] = migration/NtlContentDocumentArchiveMigration.php
 files[] = migration/NtlContentImageGalleryMigration.php
 files[] = migration/NtlContentOrganizationMigration.php
