@@ -19,3 +19,4 @@ files[] = migration/NtlContentSampleFishscalesMigration.php
 files[] = migration/NtlContentSamplePhytoMigration.php
 files[] = migration/NtlContentSlidesPhytoMigration.php
 files[] = migration/NtlContentSampleZooMigration.php
+files[] = migration/NtlTaxonomyCoreAreasMigration.php

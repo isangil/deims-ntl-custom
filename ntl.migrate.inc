@@ -37,7 +37,9 @@ function ntl_migrate_api() {
       'NtlContentSampleZooMigration' => array(
 	'class_name' => 'NtlContentSampleZooMigration',
       ),
-      // Core area vocab terms are included inside the source Tags vocab!
+      'NtlTaxonomyCoreAreasAndTags' => array(
+	'class_name' => 'NtlTaxonomyCoreAreasAndTagsMigration',
+      ),
       'NtlTaxonomyNtlKeywords' => array(
         'class_name' => 'DrupalTerm6Migration',
         'description' => "Taxonomy migration for the 'NTL Keywords' vocabulary.",
@@ -46,15 +48,6 @@ function ntl_migrate_api() {
         // @todo Make this vocabulary source ID automatic from the D6 database.
         'source_vocabulary' => '5',
         'destination_vocabulary' => 'ntl_keywords',
-      ),
-      'NtlTaxonomyTags' => array(
-        'class_name' => 'DrupalTerm6Migration',
-        'description' => "Taxonomy migration for the 'Tags' vocabulary.",
-        'source_connection' => 'drupal6',
-        'source_version' => 6,
-        // @todo Make this vocabulary source ID automatic from the D6 database.
-        'source_vocabulary' => '3',
-        'destination_vocabulary' => 'tags',
       ),
       'NtlTaxonomySiteCategory' => array(
         'class_name' => 'DrupalTerm6Migration',
