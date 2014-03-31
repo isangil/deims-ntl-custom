@@ -107,6 +107,6 @@ function ntl_deims_migration_overrides() {
     'DeimsContentResearchProject' => array('class_name' => 'NtlContentProjectMigration'),
     'DeimsContentResearchSite' => array('class_name' => 'NtlContentResearchSiteMigration'),
 //    'DeimsContentPerson' => array('class_name' => 'NtlContentPersonMigration'),
-//    'DeimsFile' => array('class_name' => 'NtlFileMigration'),
+    'DeimsFile' => array('class_name' => 'NtlFileMigration'),
   );
 }
