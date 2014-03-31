@@ -11,54 +11,46 @@ class NtlContentDataSetMigration extends DeimsContentDataSetMigration {
   
     parent::__construct($arguments);
 
+    $this->removeFieldMapping('field_eml_revision_id');
     $this->addUnmigratedSources(array(
       'revision',
       'revision_uid',
       'log',
-      'field_dataset_restricted',
       'field_emlview',
       'field_dataset_biblio_ref',       // would be great, but cannot do yet.
+      'field_dataset_mapimg',  // Map image DNM Map Img: replace with gmaps-site    
+                               // DNM to dataset, perhaps needed in RS
+      'field_dataset_geodesc',	// Geographic Description
+      'field_dataset_coor_n',	// North Bound Coordinate
+      'field_dataset_coor_s',	// South Bound Coordinate
+      'field_dataset_coor_e',	// East Bound Coordinate
+      'field_dataset_coor_w',	// West Bound Coordinate
+                        // DB related, most likely DNM, but some may be used (schemaref, etc)
+      'field_lterquerylink',	// Data Download    DE related DNM
+      'field_dataset_query_project_id',  // Query Project ID DB
+      'field_dataset_query_visible',  // Query Visible  DB  (may be used to activate the DS-DE fields)
+      'field_dataset_req_category',  //  Req Category DB
+      'field_dataset_text_source',   //  Text Source   DB    
+      'field_dataset_taxon_cov',    //  Taxon Cov     DB
+      'field_dataset_type',	  //  Dataset Type  DB
+      'field_dataset_geogcov_id',  // Geogcov ID    DB
+      'field_dataset_order',       // Dataset Order DB
+      'field_dataset_sampling_freq', //  Sampling frequency DB
+      'field_dataset_number_sites  Number of Sites    DB
+      'field_dataset_category_id      Category ID  DB
+      'field_dataset_enddate_text',  //  Ending Date DB
+      'field_dataset_begdate_text',  //  begginimg Date DB
+      'field_emlview',   //	EML Download  Do not migrate
     ));
 
    // More Sources: 
 
-   // field_dataset_mapimg Map image DNM Map Img: replace with gmaps-site
-    
-   // DNM to dataset, perhaps needed in RS
-   // field_dataset_geodesc	Geographic Description
-   // field_dataset_coor_n	North Bound Coordinate
-   // field_dataset_coor_s	South Bound Coordinate
-   // field_dataset_coor_e	East Bound Coordinate
-   // field_dataset_coor_w	West Bound Coordinate
-
    // field_dataset_project_ref	Research Project
    // Perhaps this is a reverse node-ref?
+   // field_dataset_protocol_ref   // We could....but only one protocol.
      
-   // Source: field_eml_revision_id	
-   // field_dataset_revision	Dataset Revision -> into EML revision.
-   $this->removeFieldMapping('field_eml_revision_id');
    $this->addFieldMapping('field_eml_revision_id','field_dataset_revision');
 
-   // field_dataset_protocol_ref
-   // We could....but only one protocol.
-
-   // field_lterquerylink	Data Download    ASK
-
-   // DB related, most likely DNM, but some may be used (schemaref, etc)
-   // field_dataset_query_project_id  Query Project ID DB
-   // field_dataset_query_visible  Query Visible  DB  (may be used to activate the DS-DE fields)
-   // field_dataset_req_category  Req Category DB
-   // field_dataset_text_source	Text Source   DB    
-   // field_dataset_taxon_cov	Taxon Cov     DB
-   // field_dataset_type	Dataset Type  DB
-   // field_dataset_geogcov_id	Geogcov ID    DB
-   // field_dataset_order	Dataset Order DB
-   // field_dataset_sampling_freq  Sampling frequency DB
-   // field_dataset_number_sites  Number of Sites    DB
-   // field_dataset_category_id      Category ID  DB
-   // field_dataset_enddate_text  Ending Date DB
-
-   // field_emlview	EML Download  Do not migrate
 
     $this->addUnmigratedDestinations(array(
       'field_core_areas',
@@ -67,20 +59,21 @@ class NtlContentDataSetMigration extends DeimsContentDataSetMigration {
       'field_core_areas:create_term',
       'field_keywords:create_term',
       'field_keywords:ignore_case',
-      'field_keywords:source_type',
       'field_ntl_keywords:create_term',
       'field_ntl_keywords:ignore_case',
-      'field_ntl_keywords:source_type',
       'field_tags:create_term',
       'field_tags:ignore_case',
-      'field_tags:source_type',
+      'field_section:create_term',
+      'field_section:ignore_case',
+      'field_term_categories:create_term',
+      'field_term_categories:ignore_case',
       'field_date_range:timezone',
       'field_date_range:rrule',
+      'field_publication_date:timezone',
+      'field_publication_date:rrule',
+      'field_publication_date:to',
+      'field_related_publications',
     ));
-
-   //  DESTINATIONS
-   //  field_publication
-   //  field_related_publications	Related publications (entityreference)
 
     // The 'Ntl LTER Information Manager' is node ???1048 in the Drupal 6
     // database. Add this as the default person to the metadata provider, and
@@ -132,5 +125,4 @@ class NtlContentDataSetMigration extends DeimsContentDataSetMigration {
     parent::prepareRow($row);
 
   }
-
 }
