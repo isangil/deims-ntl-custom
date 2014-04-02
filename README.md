@@ -30,15 +30,19 @@ Copy the _ntl.*_ files you downloaded from github locally, into the _ntl_
 folder you just created. Also, copy the _migration_ subfolder you downloaded from 
 _github_ into the same _ntl_ folder. 
 
-Also, we need new content types for the NTL. In the local github download, you also
-see a _features_ folder.  Inside, there are at least two folders that begin with the word
-_ntl_, (for slides and spatial data).  Move these folders to the modules folder,
+Also, we need new content types, views and DEIMS content type extensions for the 
+NTL. You will find those, _featurized_, in the local github download subfolder named
+_features_ .  Inside, you will see some features that start with the word _deims_ and
+some that begin with the word _ntl_.  THe _deims_ are overrides of existing features,
+and are located in _/profiles/deims/modules/features_, just place the content accordingly,
+overwrite the existing ones with the new - DEIMS will enact the changes.  THe custom,
+_ntl_ specific need to be moved too, for example, copy them in the _modules_ folder,
 like this:
 
-* `cp -r deims-ntl-custom/features DEIMSROOT/sites/default/modules/`
+* `cp -r deims-ntl-custom/features/ntl_* DEIMSROOT/sites/default/modules/`
 
 
 Now visit the "migrate dashboard", if needed (like, nothing seems to change), Flush the
 Class Registry cache, (use the admin toolbar, or use "drush cc") and then, re-register
 the migration classes using the Migrate->Configuration page (admin toolbar, or from Migrate
-Dashboard).  You should be ready to try it
+Dashboard).  You should be ready to try the migration!
