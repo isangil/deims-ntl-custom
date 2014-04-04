@@ -109,7 +109,7 @@ class NtlContentDataSetMigration extends DeimsContentDataSetMigration {
 
 // 12 categories
     $this->addFieldMapping('field_term_categories', '12')
-      ->sourceMigration('NtlTaxonomyCategory');
+      ->sourceMigration('NtlTaxonomyCategories');
     $this->addFieldMapping('field_term_categories:source_type')
       ->defaultValue('tid');
 
