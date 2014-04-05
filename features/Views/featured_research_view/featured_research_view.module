@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Featured Research View feature.
+ */
+
+include_once 'featured_research_view.features.inc';

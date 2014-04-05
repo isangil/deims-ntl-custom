@@ -3,6 +3,9 @@
 /**
  * @file
  * Definition of NtlContentImageGalleryMigration.
+ * 
+ * NTL did not use the Gallery2 and field gallery modules in D6,
+ * The sources are the "Image" cct.
  */
 
 class NtlContentImageGalleryMigration extends DrupalNode6Migration {
@@ -17,7 +20,7 @@ class NtlContentImageGalleryMigration extends DrupalNode6Migration {
       'description' => '',
       'source_connection' => 'drupal6',
       'source_version' => 6,
-      'source_type' => 'gallery',
+      'source_type' => 'image',
       'destination_type' => 'image_gallery',
       'user_migration' => 'DeimsUser',
     );
@@ -30,15 +33,7 @@ class NtlContentImageGalleryMigration extends DrupalNode6Migration {
     $this->addFieldMapping('field_images:file_class')->defaultValue('MigrateFileFid');
     $this->addFieldMapping('field_images:preserve_files')->defaultValue(TRUE);
 
-    $this->addFieldMapping('field_keywords', '5')
-      ->sourceMigration('NtlTaxonomyCategories');
-    $this->addFieldMapping('field_keywords:source_type')
-      ->defaultValue('tid');
-
     $this->addUnmigratedSources(array(
-      'field_image_gallery_highlight',
-      'field_image_gallery_highlight:list',
-      'field_image_gallery_highlight_data',
     ));
 
     $this->addUnmigratedDestinations(array(
@@ -52,13 +47,15 @@ class NtlContentImageGalleryMigration extends DrupalNode6Migration {
       'field_images:title',
       'field_keywords:create_term',
       'field_keywords:ignore_case',
+      'field_keywords',
+      'field_keywords:source_type',
     ));
   }
 
   public function prepareRow($row) {
     parent::prepareRow($row);
 
-    // Find all the scientific images that are attached to this gallery node.
+    // Find all the "images" that are attached to this gallery node.
     $connection = Database::getConnection('default', $this->sourceConnection);
     $query = $connection->select('node', 'n');
     $query->join('node_revisions', 'nr', 'n.vid = nr.vid');
