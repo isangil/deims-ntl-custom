@@ -13,7 +13,7 @@ function ntl_research_highlights_taxonomy_default_vocabularies() {
       'name' => 'NTL Keywords',
       'machine_name' => 'ntl_keywords',
       'description' => '',
-      'hierarchy' => '0',
+      'hierarchy' => '1',
       'module' => 'taxonomy',
       'weight' => '0',
       'rdf_mapping' => array(
