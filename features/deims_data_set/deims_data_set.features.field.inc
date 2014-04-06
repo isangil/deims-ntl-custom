@@ -574,9 +574,10 @@ function deims_data_set_field_default_fields() {
           'label' => 'inline',
           'module' => 'entityreference',
           'settings' => array(
-            'link' => 1,
+            'links' => TRUE,
+            'view_mode' => 'default',
           ),
-          'type' => 'entityreference_label',
+          'type' => 'entityreference_entity_view',
           'weight' => '2',
         ),
         'eml' => array(
@@ -972,7 +973,7 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '24',
+          'weight' => '23',
         ),
         'eml' => array(
           'label' => 'above',
@@ -1180,7 +1181,7 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '23',
+          'weight' => '22',
         ),
         'eml' => array(
           'label' => 'above',
@@ -1296,7 +1297,7 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '25',
+          'weight' => '24',
         ),
         'eml' => array(
           'label' => 'above',
@@ -1907,7 +1908,7 @@ function deims_data_set_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 27,
+          'weight' => '7',
         ),
         'eml' => array(
           'label' => 'above',
@@ -2039,7 +2040,7 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '20',
+          'weight' => '19',
         ),
         'eml' => array(
           'label' => 'above',
@@ -2183,7 +2184,7 @@ function deims_data_set_field_default_fields() {
             'text' => '[entity:label]',
           ),
           'type' => 'token_formatters_entity_reference',
-          'weight' => '5',
+          'weight' => '7',
         ),
         'eml' => array(
           'label' => 'above',
@@ -2328,7 +2329,7 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '21',
+          'weight' => '20',
         ),
         'eml' => array(
           'label' => 'above',
@@ -2467,7 +2468,7 @@ function deims_data_set_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '22',
+          'weight' => '21',
         ),
         'eml' => array(
           'label' => 'above',
@@ -2603,7 +2604,7 @@ function deims_data_set_field_default_fields() {
             'view_mode' => 'teaser',
           ),
           'type' => 'entityreference_entity_view',
-          'weight' => '6',
+          'weight' => '8',
         ),
         'eml' => array(
           'label' => 'above',
@@ -3413,12 +3414,13 @@ function deims_data_set_field_default_fields() {
           'weight' => '5',
         ),
         'default' => array(
-          'label' => 'inline',
+          'label' => 'hidden',
           'module' => 'entityreference',
           'settings' => array(
-            'link' => 1,
+            'links' => 0,
+            'view_mode' => 'map',
           ),
-          'type' => 'entityreference_label',
+          'type' => 'entityreference_entity_view',
           'weight' => '7',
         ),
         'eml' => array(
@@ -3562,7 +3564,7 @@ function deims_data_set_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 28,
+          'weight' => '8',
         ),
         'eml' => array(
           'label' => 'above',
@@ -3790,7 +3792,7 @@ function deims_data_set_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 26,
+          'weight' => '6',
         ),
         'eml' => array(
           'label' => 'above',
@@ -3911,7 +3913,7 @@ function deims_data_set_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 29,
+          'weight' => '9',
         ),
         'eml' => array(
           'label' => 'above',

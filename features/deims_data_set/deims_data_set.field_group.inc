@@ -54,6 +54,10 @@ function deims_data_set_field_group_info() {
     'children' => array(
       0 => 'field_core_areas',
       1 => 'field_keywords',
+      2 => 'field_tags',
+      3 => 'field_ntl_keywords',
+      4 => 'field_section',
+      5 => 'field_term_categories',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -163,7 +167,7 @@ function deims_data_set_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Downloads',
-    'weight' => '5',
+    'weight' => '10',
     'children' => array(
       0 => 'field_data_sources',
       1 => 'field_eml_link',
@@ -220,13 +224,13 @@ function deims_data_set_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Methodology',
-    'weight' => '6',
+    'weight' => '11',
     'children' => array(
-      0 => 'field_purpose',
-      1 => 'field_additional_information',
+      0 => 'field_additional_information',
+      1 => 'field_instrumentation',
       2 => 'field_maintenance',
       3 => 'field_methods',
-      4 => 'field_instrumentation',
+      4 => 'field_purpose',
       5 => 'field_quality_assurance',
     ),
     'format_type' => 'fieldset',
@@ -282,7 +286,8 @@ function deims_data_set_field_group_info() {
     'label' => 'People',
     'weight' => '3',
     'children' => array(
-      0 => 'field_project_roles',
+      0 => 'field_person_creator',
+      1 => 'field_project_roles',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -369,7 +374,7 @@ function deims_data_set_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Related',
-    'weight' => '4',
+    'weight' => '9',
     'children' => array(
       0 => 'field_related_links',
       1 => 'field_related_publications',
@@ -429,10 +434,10 @@ function deims_data_set_field_group_info() {
     'label' => 'Summary',
     'weight' => '0',
     'children' => array(
-      0 => 'field_data_set_id',
-      1 => 'field_abstract',
-      2 => 'field_short_name',
-      3 => 'field_doi',
+      0 => 'field_abstract',
+      1 => 'field_data_set_id',
+      2 => 'field_doi',
+      3 => 'field_short_name',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
