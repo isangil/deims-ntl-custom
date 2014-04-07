@@ -145,7 +145,7 @@ class DeimsContentDataSetMigration extends DrupalNode6Migration {
 
     foreach ($roles as $field => $role) {
       if (!empty($row->{$field}) && $source_ids = array_filter($row->{$field})) {
-        if ($user_ids = $this->handleSourceMigration('NewContentPersonNew', $source_ids)) {
+        if ($user_ids = $this->handleSourceMigration('NtlContentPersonNew', $source_ids)) {
           if (!is_array($user_ids)) {
             $user_ids = array($user_ids);
           }
