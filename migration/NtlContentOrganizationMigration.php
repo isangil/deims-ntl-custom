@@ -21,6 +21,31 @@ class NtlContentOrganizationMigration extends DeimsContentOrganizationMigration 
 
     // Remap the organization title to the link field's title value.
     $this->removeFieldMapping('title');
-    $this->addFieldMapping('title', 'field_person_organization_value');
+    $this->addFieldMapping('title', 'field_person_organization_value')
+      ->description('tweaked in prepareRow()');
   }
+  
+  public function prepareRow($row){
+
+    // Fix entropical organization names.
+    switch ($row->field_person_organization_value) {
+      case 'Univeristy of Wisconsin':
+        $row->field_person_organization_value = 'University of Wisconsin';
+        break;
+      case 'University of Wisconsins Madison':
+        $row->field_person_organization_value = 'University of Wisconsin Madison';
+        break;
+      case 'University of Wisonsin':
+        $row->field_person_organization_value = 'University of Wisconsin';
+        break;
+      case 'Univesrity of Wisconsin':
+        $row->field_person_organization_value = 'University of Wisconsin';
+        break;
+      case 'US Geological Survey':
+        $row->field_person_organization_value = 'U.S. Geological Survey';
+        break;
+    }
+    parent::prepareRow($row);
+  }
+
 }
