@@ -8,6 +8,7 @@ files[] = migration/NtlContentDocumentArchiveMigration.php
 files[] = migration/NtlContentImageGalleryMigration.php
 files[] = migration/NtlContentOrganizationMigration.php
 files[] = migration/NtlContentPageMigration.php
+files[] = migration/NtlContentPersonNewMigration.php
 files[] = migration/NtlContentProjectMigration.php
 files[] = migration/NtlContentProtocolMigration.php
 files[] = migration/NtlContentResearchHighlightsMigration.php

@@ -19,6 +19,9 @@ function ntl_migrate_api() {
       'NtlContentProtocol' => array(
         'class_name' => 'NtlContentProtocolMigration',
       ),
+      'NtlContentPersonNew' => array(
+        'class_name' => 'NtlContentPersonNewMigration',
+      ),
       'NtlContentResearchHighLights' => array(
         'class_name' => 'NtlContentResearchHighlightsMigration',
       ),
