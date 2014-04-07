@@ -28,7 +28,12 @@ Under the _sites/default/modules_, create another folder named _ntl_
 
 Copy the _ntl.*_ files you downloaded from github locally, into the _ntl_ 
 folder you just created. Also, copy the _migration_ subfolder you downloaded from 
-_github_ into the same _ntl_ folder. 
+_github_ into the same _ntl_ folder. One more thing: To complete the migration-related 
+toolkit,  we will need to overwrite the parent DeimsContentDataSet Migration class.
+Please take the file migration-core/DeimsContentDataSet.php, and use it to replace
+the file with the same nane in profile/deims/modules/custom/deims_d6_migration/migration.
+This will ensure the parent class calls the correct Person class and a proper
+migration.  
 
 Also, we need new content types, views and DEIMS content type extensions for the 
 NTL. You will find those, _featurized_, in the local github download subfolder named
