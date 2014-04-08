@@ -12,6 +12,10 @@ class NtlContentDataSetMigration extends DeimsContentDataSetMigration {
     parent::__construct($arguments);
 
     $this->removeFieldMapping('field_eml_revision_id');
+
+    $this->removeFieldMapping('field_core_areas');
+    $this->removeFieldMapping('field_core_areas:source_type');
+
     $this->addUnmigratedSources(array(
       'revision',
       'revision_uid',
@@ -36,8 +40,8 @@ class NtlContentDataSetMigration extends DeimsContentDataSetMigration {
       'field_dataset_geogcov_id',  // Geogcov ID    DB
       'field_dataset_order',       // Dataset Order DB
       'field_dataset_sampling_freq', //  Sampling frequency DB
-      'field_dataset_number_sites  Number of Sites    DB
-      'field_dataset_category_id      Category ID  DB
+      'field_dataset_number_sites', // Number of Sites    DB
+      'field_dataset_category_id',   //   Category ID  DB
       'field_dataset_enddate_text',  //  Ending Date DB
       'field_dataset_begdate_text',  //  begginimg Date DB
       'field_emlview',   //	EML Download  Do not migrate
@@ -48,13 +52,14 @@ class NtlContentDataSetMigration extends DeimsContentDataSetMigration {
    // field_dataset_project_ref	Research Project
    // Perhaps this is a reverse node-ref?
    // field_dataset_protocol_ref   // We could....but only one protocol.
-     
+  
+   $this->addFieldMapping('field_protocol_ref','field_dataset_protocol_ref')
+    ->sourceMigration('NtlContentProtocol');
+    
    $this->addFieldMapping('field_eml_revision_id','field_dataset_revision');
 
 
     $this->addUnmigratedDestinations(array(
-      'field_core_areas',
-      'field_core_areas:source_type',
       'field_core_areas:ignore_case',
       'field_core_areas:create_term',
       'field_keywords:create_term',
@@ -81,18 +86,23 @@ class NtlContentDataSetMigration extends DeimsContentDataSetMigration {
 
     $this->removeFieldMapping('field_person_metadata_provider');
     $this->addFieldMapping('field_person_metadata_provider')
-      ->sourceMigration('DeimsContentPerson')
+      ->sourceMigration('NtlContentPersonNew')
       ->defaultValue(1048);
 
     $this->removeFieldMapping('field_person_publisher');
     $this->addFieldMapping('field_person_publisher')
-      ->sourceMigration('DeimsContentPerson')
+      ->sourceMigration('NtlContentPersonNew')
       ->defaultValue(1048);
 
-//   3 Tags
+//   3 Tags  
     $this->addFieldMapping('field_tags', '3')
-      ->sourceMigration('NtlTaxonomyTags');
+      ->sourceMigration('NtlTaxonomyCoreAreasAndTags');
     $this->addFieldMapping('field_tags:source_type')
+      ->defaultValue('tid');
+
+    $this->addFieldMapping('field_core_areas', '3')
+      ->sourceMigration('NtlTaxonomyCoreAreasAndTags');
+    $this->addFieldMapping('field_core_areas:source_type')
       ->defaultValue('tid');
 
 // 5 NTL keywords
