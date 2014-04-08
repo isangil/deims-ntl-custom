@@ -918,7 +918,7 @@ function deims_data_set_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '80',
+        'weight' => '86',
       ),
       'workbench_access_field' => 0,
     ),
@@ -1028,7 +1028,7 @@ function deims_data_set_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '77',
+        'weight' => '83',
       ),
       'workbench_access_field' => 0,
     ),
@@ -1130,7 +1130,7 @@ function deims_data_set_field_default_fields() {
         'module' => 'token_field',
         'settings' => array(),
         'type' => 'token_field',
-        'weight' => '79',
+        'weight' => '85',
       ),
       'workbench_access_field' => 0,
     ),
@@ -1244,7 +1244,7 @@ function deims_data_set_field_default_fields() {
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
-        'weight' => '76',
+        'weight' => '82',
       ),
       'workbench_access_field' => 0,
     ),
@@ -1351,7 +1351,7 @@ function deims_data_set_field_default_fields() {
           'apply_chosen' => 0,
         ),
         'type' => 'options_select',
-        'weight' => '78',
+        'weight' => '84',
       ),
       'workbench_access_field' => 0,
     ),
@@ -2702,6 +2702,128 @@ function deims_data_set_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-data_set-field_protocol_ref'.
+  $fields['node-data_set-field_protocol_ref'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_protocol_ref',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(
+        'node' => array(
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+          'table' => 'node',
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'entityreference',
+      'settings' => array(
+        'delete_on_parent_delete' => '',
+        'handler' => 'base',
+        'handler_settings' => array(
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+          'sort' => array(
+            'type' => 'none',
+          ),
+          'target_bundles' => array(
+            'protocol' => 'protocol',
+          ),
+        ),
+        'target_type' => 'node',
+      ),
+      'translatable' => '0',
+      'type' => 'entityreference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'data_set',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'bdp' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'default' => array(
+          'label' => 'above',
+          'module' => 'entityreference',
+          'settings' => array(
+            'link' => FALSE,
+          ),
+          'type' => 'entityreference_label',
+          'weight' => 25,
+        ),
+        'eml' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'eml_hl' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'iso' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_protocol_ref',
+      'label' => 'Protocol',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'entityreference',
+        'settings' => array(
+          'apply_chosen' => '',
+          'match_operator' => 'CONTAINS',
+          'path' => '',
+          'size' => 60,
+        ),
+        'type' => 'entityreference_autocomplete',
+        'weight' => '8',
+      ),
+      'workbench_access_field' => 0,
+    ),
+  );
+
   // Exported field: 'node-data_set-field_publication_date'.
   $fields['node-data_set-field_publication_date'] = array(
     'field_config' => array(
@@ -3503,7 +3625,7 @@ function deims_data_set_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'entityreference_autocomplete',
-        'weight' => '8',
+        'weight' => '9',
       ),
       'workbench_access_field' => 0,
     ),
@@ -3997,6 +4119,7 @@ function deims_data_set_field_default_fields() {
   t('Methods');
   t('NTL Keywords');
   t('Owner/Creator');
+  t('Protocol');
   t('Publication Date');
   t('Publisher');
   t('Purpose');

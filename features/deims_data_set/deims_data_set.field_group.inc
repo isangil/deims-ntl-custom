@@ -407,6 +407,7 @@ function deims_data_set_field_group_info() {
       0 => 'field_related_links',
       1 => 'field_related_publications',
       2 => 'field_related_sites',
+      3 => 'field_protocol_ref',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -466,9 +467,9 @@ function deims_data_set_field_group_info() {
     'children' => array(
       0 => 'field_core_areas',
       1 => 'field_keywords',
-      2 => 'field_tags',
-      3 => 'field_ntl_keywords',
-      4 => 'field_section',
+      2 => 'field_ntl_keywords',
+      3 => 'field_section',
+      4 => 'field_tags',
       5 => 'field_term_categories',
     ),
     'format_type' => 'htab',
