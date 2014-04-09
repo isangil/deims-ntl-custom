@@ -1,6 +1,6 @@
 name = NTL Research Highlights
 core = 7.x
-package = Features
+package = NTL Features
 version = 7.x-1.0-dev
 project = ntl_research_highlights
 dependencies[] = deims_taxonomy_lter_controlled_vocabulary
