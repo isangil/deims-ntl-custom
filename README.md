@@ -46,6 +46,14 @@ like this:
 
 * `cp -r deims-ntl-custom/features/ntl_* DEIMSROOT/sites/default/modules/`
 
+One more thing -- NTL uses the "content profile" in the Source D6 instance, which
+invalidates the default Person migration due to a messy database.  To overcome 
+that, we have to overwrite the parent DeimsContentPerson class.  PLease copy the
+file at migration-core into the custom deims migration.  Like this:
+
+* `cp deims-ntl-custom/migration-core/DeimsContentDataSet.php --
+*     DEIMSROOT/profiles/deims/modules/custom/deims_d6_migration/migration`
+
 
 Now visit the "migrate dashboard", if needed (like, nothing seems to change), Flush the
 Class Registry cache, (use the admin toolbar, or use "drush cc") and then, re-register
