@@ -49,8 +49,7 @@ class NtlContentPersonNewMigration extends Migration {
      'field_person_webpage_attributes',
     ));
 
-    $this->source = new MigrateSourceSQL($query);
-
+    $this->source = new MigrateSourceSQL($query,array(), NULL, array('map_joinable' => FALSE));
     $this->destination = new MigrateDestinationNode('person');
 
     // Tell Migrate where the IDs for this migration live, and
