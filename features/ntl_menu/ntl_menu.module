@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the NTL Menu feature.
+ */
+
+include_once 'ntl_menu.features.inc';
