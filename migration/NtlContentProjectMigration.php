@@ -69,7 +69,7 @@ class NtlContentProjectMigration extends DeimsContentResearchProjectMigration {
     $this->addFieldMapping('field_startdate','field_startdate');
     $this->addFieldMapping('field_startdate:to','field_startdate:value2');
     $this->addFieldMapping('field_related_people','field_investigators')
-     ->sourceMigration('DeimsContentPerson');
+     ->sourceMigration('NtlContentPersonNew');
     $this->addFieldMapping('field_related_site','field_sites')
       ->sourceMigration('DeimsContentResearchSite');
     $this->addFieldMapping('field_related_data_sets','field_project_datasets')
