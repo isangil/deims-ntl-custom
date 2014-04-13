@@ -80,14 +80,14 @@ class NtlContentDataSetMigration extends DeimsContentDataSetMigration {
       'field_related_publications',
     ));
 
-    // The 'Ntl LTER Information Manager' is node ???1048 in the Drupal 6
+    // The 'Ntl LTER Information Manager' is node 11141 in the Drupal 6
     // database. Add this as the default person to the metadata provider, and
     // publisher fields.
 
     $this->removeFieldMapping('field_person_metadata_provider');
     $this->addFieldMapping('field_person_metadata_provider')
       ->sourceMigration('NtlContentPersonNew')
-      ->defaultValue(1048);
+      ->defaultValue(11141);
 
     $this->removeFieldMapping('field_person_publisher');
     $this->addFieldMapping('field_person_publisher')
