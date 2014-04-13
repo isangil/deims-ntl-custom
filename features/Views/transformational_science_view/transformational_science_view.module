@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Transformational Science View feature.
- */
-
-include_once 'transformational_science_view.features.inc';
