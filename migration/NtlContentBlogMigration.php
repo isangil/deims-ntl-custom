@@ -51,7 +51,7 @@ class NtlContentBlogMigration extends DrupalNode6Migration {
       'field_related_people',
       'field_related_publications',
       'field_section:ignore_case',
-      'field_sectiom:create_term',
+      'field_section:create_term',
       'field_ntl_keywords:ignore_case',
       'field_ntl_keywords:create_term',
     ));
