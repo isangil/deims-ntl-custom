@@ -10,6 +10,9 @@ function ntl_migrate_api() {
   $info = array(
     'api' => 2,
     'migrations' => array(
+      'NtlContentBlog' => array(
+        'class_name' => 'NtlContentBlogMigration',
+      ),
       'NtlContentDocumentArchive' => array(
         'class_name' => 'NtlContentDocumentArchiveMigration',
       ),
