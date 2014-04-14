@@ -14,7 +14,6 @@ files[] = migration/NtlContentProjectMigration.php
 files[] = migration/NtlContentProtocolMigration.php
 files[] = migration/NtlContentResearchHighlightsMigration.php
 files[] = migration/NtlContentResearchSiteMigration.php
-;files[] = migration/NtlContentPersonMigration.php
 files[] = migration/NtlFileMigration.php
 files[] = migration/NtlContentSampleDendyMigration.php
 files[] = migration/NtlContentSampleFishscalesMigration.php

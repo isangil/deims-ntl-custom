@@ -88,6 +88,10 @@ class NtlContentPersonNewMigration extends Migration {
 
     $this->addFieldMapping('field_person_image','field_person_image_fid')
      ->sourceMigration('DeimsFile');
+    $this->addFieldMapping('field_person_image:file_class')->defaultValue('MigrateFileFid');
+    $this->addFieldMapping('field_person_image:preserve_files')->defaultValue(TRUE);
+
+
 
     $this->addFieldMapping('field_url','field_person_webpage_url');
     $this->addFieldMapping('field_url:title','field_person_webpage_title');
@@ -122,7 +126,6 @@ class NtlContentPersonNewMigration extends Migration {
       'field_person_department:language',
       'field_person_specialty:language',
       'field_person_image:language',
-      'field_person_image:preserve_files',
       'field_person_image:destination_dir',
       'field_person_image:destination_file',
       'field_person_image:file_replace',
