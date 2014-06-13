@@ -232,7 +232,7 @@ function sample_archive_dendy_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'sample-archive-dendy';
+  $handler->display->display_options['path'] = 'data/sample_archive/dendy';
   $export['sample_archive_dendy'] = $view;
 
   return $export;
