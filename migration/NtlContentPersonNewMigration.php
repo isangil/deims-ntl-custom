@@ -7,7 +7,7 @@
 
 class NtlContentPersonNewMigration extends Migration {
 
-  protected $dependencies = array('DeimsContentOrganization');
+  protected $dependencies = array('DeimsContentOrganization','DeimsFile');
 
   public function __construct($arguments) {
 
