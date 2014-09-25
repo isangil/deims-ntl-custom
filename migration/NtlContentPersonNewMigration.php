@@ -18,7 +18,19 @@ class NtlContentPersonNewMigration extends Migration {
    $query = $this->connection->select('content_type_person', 'ctp');
    $query->fields('ctp', 
     array(
-     'nid', 
+     'nid',
+     'language',
+     'title',
+     'uid',
+     'status',
+     'created',
+     'changed',
+     'comment',
+     'promote',
+     'moderate',
+     'sticky', 
+     'tnid',
+     'translate',  
      'field_person_organization_value',
      'field_person_phone_value',
      'field_person_fax_value',
@@ -64,7 +76,17 @@ class NtlContentPersonNewMigration extends Migration {
     $this->map = new MigrateSQLMap($this->machineName, $source_key_schema, $this->destination->getKeySchema());
 
     // Add our mappings.
-
+    $this->addFieldMapping('tnid','tnid');
+    $this->addFieldMapping('language','language');
+    $this->addFieldMapping('translate','translate');
+    $this->addFieldMapping('uid','uid');
+    $this->addFieldMapping('created','created');
+    $this->addFieldMapping('changed','changed');
+    $this->addFieldMapping('status','status');
+    $this->addFieldMapping('promote','promote');
+    $this->addFieldMapping('sticky','sticky');
+    $this->addFieldMapping('comment','comment');
+    $this->addFieldMapping('revision','revision');
     $this->addFieldMapping('field_phone', 'field_person_phone_value');
     $this->addFieldMapping('field_email', 'field_person_email_email');
     $this->addFieldMapping('field_fax', 'field_person_fax_value');
@@ -127,6 +149,7 @@ class NtlContentPersonNewMigration extends Migration {
       'field_person_image:urlencode',
       'field_person_image:alt',
       'field_person_image:title',
+      'uid',      
     ));
   }
 
