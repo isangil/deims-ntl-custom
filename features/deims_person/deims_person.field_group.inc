@@ -52,7 +52,7 @@ function deims_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Details',
-    'weight' => '5',
+    'weight' => '3',
     'children' => array(
       0 => 'group_contact',
       1 => 'group_organization',
@@ -110,8 +110,6 @@ function deims_person_field_group_info() {
     'weight' => '20',
     'children' => array(
       0 => 'field_associated_biblio_author',
-      1 => 'field_person_id',
-      2 => 'field_user_account',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -143,8 +141,6 @@ function deims_person_field_group_info() {
       2 => 'field_person_college',
       3 => 'field_person_department',
       4 => 'field_person_specialty',
-      5 => 'field_person_mo_role',
-      6 => 'field_person_wsc_role',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
