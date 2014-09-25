@@ -23,7 +23,6 @@ class NtlContentPersonNewMigration extends Migration {
      'field_person_phone_value',
      'field_person_fax_value',
      'field_person_email_email',
-     'field_person_uid_uid',
      'field_person_list_value',
      'field_person_personid_value',
      'field_person_role_value',
@@ -69,10 +68,7 @@ class NtlContentPersonNewMigration extends Migration {
     $this->addFieldMapping('field_phone', 'field_person_phone_value');
     $this->addFieldMapping('field_email', 'field_person_email_email');
     $this->addFieldMapping('field_fax', 'field_person_fax_value');
-    $this->addFieldMapping('field_user_account', 'field_person_uid_uid')
-      ->sourceMigration('DeimsUser');
     $this->addFieldMapping('field_list_in_directory', 'field_person_list_value');
-    $this->addFieldMapping('field_person_id', 'field_person_personid_value');
     $this->addFieldMapping('field_person_role', 'field_person_role_value');
     $this->addFieldMapping('field_person_title', 'field_person_title_value');
 
@@ -102,8 +98,6 @@ class NtlContentPersonNewMigration extends Migration {
     $this->addFieldMapping('field_person_department','field_person_department_value');
     $this->addFieldMapping('field_person_specialty','field_person_specialty_value');
     $this->addFieldMapping('field_address:premise','field_person_building_value');
-    $this->addFieldMapping('field_person_mo_role','field_person_mo_role_value');
-    $this->addFieldMapping('field_person_wsc_role','field_person_wsc_role_value');
 
     // Values for field_organization provided in prepare()).
     $this->addFieldMapping('field_organization', NULL)
