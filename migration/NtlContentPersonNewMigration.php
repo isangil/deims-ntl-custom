@@ -27,7 +27,6 @@ class NtlContentPersonNewMigration extends Migration {
      'changed',
      'comment',
      'promote',
-     'moderate',
      'sticky', 
      'tnid',
      'translate',  
@@ -36,7 +35,6 @@ class NtlContentPersonNewMigration extends Migration {
      'field_person_fax_value',
      'field_person_email_email',
      'field_person_list_value',
-     'field_person_personid_value',
      'field_person_role_value',
      'field_person_title_value',
      'field_person_first_name_value',
@@ -48,12 +46,9 @@ class NtlContentPersonNewMigration extends Migration {
      'field_person_address_value',
      'field_person_college_value',
      'field_person_department_value',  
-     'field_person_mo_role_value',
-     'field_person_wsc_role_value',
      'field_person_building_value',
      'field_person_specialty_value',
      'field_person_middle_name_value',
-     'field_person_room_value', 
      'field_person_image_fid',
      'field_person_webpage_url',
      'field_person_webpage_title',
@@ -79,14 +74,12 @@ class NtlContentPersonNewMigration extends Migration {
     $this->addFieldMapping('tnid','tnid');
     $this->addFieldMapping('language','language');
     $this->addFieldMapping('translate','translate');
-    $this->addFieldMapping('uid','uid');
     $this->addFieldMapping('created','created');
     $this->addFieldMapping('changed','changed');
     $this->addFieldMapping('status','status');
     $this->addFieldMapping('promote','promote');
     $this->addFieldMapping('sticky','sticky');
     $this->addFieldMapping('comment','comment');
-    $this->addFieldMapping('revision','revision');
     $this->addFieldMapping('field_phone', 'field_person_phone_value');
     $this->addFieldMapping('field_email', 'field_person_email_email');
     $this->addFieldMapping('field_fax', 'field_person_fax_value');
@@ -109,12 +102,9 @@ class NtlContentPersonNewMigration extends Migration {
     $this->addFieldMapping('field_person_image:file_class')->defaultValue('MigrateFileFid');
     $this->addFieldMapping('field_person_image:preserve_files')->defaultValue(TRUE);
 
-
-
     $this->addFieldMapping('field_url','field_person_webpage_url');
     $this->addFieldMapping('field_url:title','field_person_webpage_title');
     $this->addFieldMapping('field_url:attributes','field_person_webpage_attributes');
-    $this->addFieldMapping('field_address:sub_premise','field_person_room');
 
     $this->addFieldMapping('field_person_college','field_person_college_value');
     $this->addFieldMapping('field_person_department','field_person_department_value');
@@ -127,13 +117,13 @@ class NtlContentPersonNewMigration extends Migration {
 
     $this->addUnmigratedDestinations(array(
       'field_address:sub_administrative_area',
+      'field_address:sub_premise',
       'field_address:dependent_locality',
       'field_address:organisation_name',
       'field_address:name_line',
       'field_address:first_name',
       'field_address:last_name',
       'field_address:data',
-      'field_name:given',
       'field_name:generational',
       'field_name:credentials',
       'field_person_title:language',
@@ -142,14 +132,13 @@ class NtlContentPersonNewMigration extends Migration {
       'field_person_department:language',
       'field_person_specialty:language',
       'field_person_image:language',
-      'field_person_image:destination_dir',
-      'field_person_image:destination_file',
-      'field_person_image:file_replace',
-      'field_person_image:source_dir',
-      'field_person_image:urlencode',
       'field_person_image:alt',
       'field_person_image:title',
-      'uid',      
+      'uid',
+      'revision',
+      'log',
+      'revision_uid',
+      'is_new',    
     ));
   }
 
